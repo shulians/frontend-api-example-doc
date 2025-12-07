@@ -1,0 +1,74 @@
+.servicios-page {
+    width: 100%;
+}
+
+/* Header con imagen */
+.servicios-header {
+    width: 100%;
+    height: 150px; /* header más pequeño */
+    background-image: url('https://source.unsplash.com/1600x400/?technology,office');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+    .servicios-header h1 {
+        font-size: 32px;
+        margin: 0;
+    }
+
+    .servicios-header p {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+/* Contenedor principal debajo del header */
+.servicios-container {
+    display: flex;
+    height: calc(100vh - 150px); /* altura total menos header */
+}
+
+/* Menú vertical izquierdo fijo */
+.menu-vertical {
+    width: 200px;
+    background-color: #ecf0f1;
+    padding: 20px;
+    position: sticky; /* importante */
+    top: 0; /* relativo al contenedor padre */
+    height: 100%; /* ocupa toda la altura disponible */
+    overflow-y: auto; /* si hay muchos items, que se pueda scrollear */
+}
+
+    .menu-vertical ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .menu-vertical li {
+        margin-bottom: 15px;
+    }
+
+    .menu-vertical a {
+        text-decoration: none;
+        color: #2c3e50;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+        .menu-vertical a:hover {
+            color: #3498db;
+        }
+
+/* Contenido derecho scrollable */
+.contenido-servicio {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    height: 100%;
+    overflow-y: auto; /* contenido derecho scrollea */
+}
